@@ -1,0 +1,286 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Bringova-Inspired Clean Modern Design */
+
+  /* Backgrounds */
+  --neuron-bg-page: #F9FAFB;
+  --neuron-bg-elevated: #ffffff;
+  --neuron-bg-subtle: rgba(249, 250, 251, 0.5);
+  --neuron-bg-hover: rgba(243, 244, 246, 0.5);
+
+  /* Ink (Text Colors) */
+  --neuron-ink-primary: #111827;
+  --neuron-ink-secondary: #6B7280;
+  --neuron-ink-muted: #9CA3AF;
+
+  /* Brand Colors - Red/Coral Primary */
+  --neuron-brand-red: #EF4444;
+  --neuron-brand-red-600: #DC2626;
+  --neuron-brand-red-100: #FEE2E2;
+  --neuron-brand-red-50: #FEF2F2;
+  
+  /* Legacy green variables for compatibility - mapped to red */
+  --neuron-brand-green: #EF4444;
+  --neuron-brand-green-600: #DC2626;
+  --neuron-brand-green-100: #FEE2E2;
+  --neuron-brand-green-50: #FEF2F2;
+
+  /* Secondary Accent - Amber */
+  --neuron-accent-amber: #F59E0B;
+  --neuron-accent-amber-100: #FEF3C7;
+  --neuron-accent-amber-700: #B45309;
+
+  /* UI Colors */
+  --neuron-ui-border: #E5E7EB;
+  --neuron-ui-divider: #F3F4F6;
+
+  /* States */
+  --neuron-state-hover: #F9FAFB;
+  --neuron-state-selected: #FEF2F2;
+
+  /* Semantic Colors */
+  --neuron-semantic-success: #10B981;
+  --neuron-semantic-warn: #F59E0B;
+  --neuron-semantic-danger: #EF4444;
+
+  /* Elevation - Very soft shadows */
+  --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+  --elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --neuron-radius-s: 8px;
+  --neuron-radius-m: 12px;
+  --neuron-radius-l: 16px;
+  --neuron-radius-xl: 20px;
+  --neuron-radius-pill: 999px;
+
+  /* Legacy theme variables (for shadcn compatibility) */
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #EF4444;
+  --primary-foreground: #ffffff;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #6B7280;
+  --muted-foreground: #6B7280;
+  --accent: #FEF2F2;
+  --accent-foreground: #111827;
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: #E5E7EB;
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #E5E7EB;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #EF4444;
+  --chart-1: #EF4444;
+  --chart-2: #F59E0B;
+  --chart-3: #10B981;
+  --chart-4: #3B82F6;
+  --chart-5: #8B5CF6;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #EF4444;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #FEF2F2;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #EF4444;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground
+  );
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground;
+    background: var(--neuron-bg-page);
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /**
+  * Neuron OS Typography - DO NOT override with Tailwind classes
+  */
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    color: var(--neuron-ink-primary);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+    color: var(--neuron-ink-primary);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: -0.005em;
+    color: var(--neuron-ink-primary);
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: var(--neuron-ink-primary);
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    letter-spacing: 0;
+    color: var(--neuron-ink-secondary);
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0;
+    color: var(--neuron-ink-primary);
+  }
+
+  button {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.5px;
+    letter-spacing: 0;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+  }
+
+  /* Tabular numbers for data display */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Hide scrollbars while maintaining scroll functionality */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
