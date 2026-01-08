@@ -1,0 +1,5 @@
+project_name,unit_code,customer_name,phone,email,total_amount,downpayment,monthly_amount,total_months,payment_start_date,status,unit_type,phase,move_in_date,legacy_id,notes
+Torre Lorenzo Loyola,TL-101,Juan Dela Cruz,09171234567,juan@example.com,2500000,500000,25000,80,2024-02-01,available,Studio,Phase 1,2025-06-15,TL-LEG-001,Initial sale via broker
+Torre Lorenzo Loyola,TL-102,Maria Santos,09179876543,maria@example.com,2800000,560000,28000,80,2024-03-01,reserved,Studio,Phase 1,2025-07-01,TL-LEG-002,Reserved during launch
+Harborview Residences,HB-204,Carlos Reyes,09221234567,carlos@example.com,3200000,640000,26000,98,2024-04-15,in_payment_cycle,1BR,Phase 2,2026-01-20,HB-LEG-010,Transferred from old ledger
+Harborview Residences,HB-205,Ana Garcia,09981230000,ana@example.com,3100000,620000,25000,98,2024-05-01,overdue,1BR,Phase 2,2026-02-01,HB-LEG-011,Needs follow-up
